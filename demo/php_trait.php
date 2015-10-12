@@ -21,7 +21,7 @@ trait ClassTraitsInterface {
 }
 
 trait ClassTraitsInterface1 {
-    //const sssss = 'sssssssssss';这里会报错是因为trait不能有变量和常量
+    //const sssss = 'sssssssssss';这里会报错是因为trait不能定义常量
 
     public function fun1() {
         echo __METHOD__, '<br/>';

@@ -16,17 +16,17 @@ class ClassStatic
 
 	static function getStatic() {
 		echo '<br/>', __METHOD__, '<br/>';
-
+		echo self::$static, '<br/>';
 	}
 
 	function notStatic()
 	{
 		echo '<br/>', __METHOD__, '<br/>';
-		echo $this->nostatic;
+		echo $this->nostatic;//如果是静态调用的时候会被报错
 	}
 }
 
 $cs = new ClassStatic();
 echo $cs->getStatic();
-//echo $cs->static;这里会报E_SCRICT错误
+//echo $cs->static;//这里会报E_SCRICT错误
 //ClassStatic::notStatic();//会报错，因为notStatic已经变成了静态方法，不能用$this->调用
