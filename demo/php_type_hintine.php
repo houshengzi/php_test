@@ -19,7 +19,13 @@ class ClassTypeHinting
         print_r($params);
         echo '</pre><br/>';
     }
+
+    public function typeInt(int $param)
+    {
+        echo $param, '<br/>', PHP_EOL;
+    }
 }
 
 $cth = new ClassTypeHinting();
-$cth->typeArray(1);
+//$cth->typeArray(1);//报错,因为参数不是数组类型
+$cth->typeInt(333);//报错，因为
