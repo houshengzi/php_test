@@ -27,4 +27,4 @@ basic\fun();//限定名称，会以当前文件的所在的命名空间进行解
 new basic\ClassNamespaceBasic();
 
 \PhpTestProject\basic\fun();//完全限定名称，必须最前需要用反斜杠
-new PhpTestProject\basic\ClassNamespaceBasic();
+new \PhpTestProject\basic\ClassNamespaceBasic();
