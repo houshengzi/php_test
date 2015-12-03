@@ -11,10 +11,10 @@ try {
     if ($c != 1)
         throw new \Exception("Error Processing Request", 1);
         
-// } catch (Exception $e) { 这里不能运行，是因为异常类也遵循命名空间的原则。限定类，非限定类
+// } catch (Exception $e) { 这里不能运行，是因为异常类也遵循命名空间的原则。因为上面是已经完全限定类
 //     echo $e->getMessage();
 // }
 
-} catch (Exception $e) {
-    echo $e->getMessage();
+} catch (\Exception $e) {
+    echo $e->getMessage(), '<br/>';
 }
